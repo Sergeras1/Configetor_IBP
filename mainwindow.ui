@@ -1,0 +1,891 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1280</width>
+    <height>720</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Конфигуратор</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="1">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="minimumSize">
+       <size>
+        <width>1250</width>
+        <height>640</height>
+       </size>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Общее</string>
+       </attribute>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>30</y>
+          <width>111</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Общее</string>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>330</y>
+          <width>240</width>
+          <height>290</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;Segoe UI&quot;;</string>
+        </property>
+        <property name="title">
+         <string>UART</string>
+        </property>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>4</x>
+           <y>40</y>
+           <width>231</width>
+           <height>238</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <property name="spacing">
+           <number>8</number>
+          </property>
+          <property name="sizeConstraint">
+           <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>Порт</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox">
+            <item>
+             <property name="text">
+              <string>COM1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>COM2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>COM3</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>COM4</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>COM5</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>Bound rate</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_2">
+            <item>
+             <property name="text">
+              <string>1200</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>2400</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>4800</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>9600</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>19200</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>38400</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>57600</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>115200</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>230400</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>460800</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>921600</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="connectBtn">
+            <property name="text">
+             <string>Подключиться</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="disconnectBtn">
+            <property name="text">
+             <string>Отключиться</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>150</y>
+          <width>430</width>
+          <height>470</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>430</width>
+          <height>470</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;Segoe UI&quot;;</string>
+        </property>
+        <property name="title">
+         <string>Общие данные конфигурациии системы </string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QTableWidget" name="tableWidget">
+           <row>
+            <property name="text">
+             <string>Тип платы</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Заводской номер платы</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Тип ПО</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Версия ПО MCUINV</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Ревизия ПО MCUINV</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Версия ПО MCUREC</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Ревизия ПО MCUREC</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Дата прошивки MCUREC</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Управление вентиляторами</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Сервисные настройки</string>
+            </property>
+           </row>
+           <column>
+            <property name="text">
+             <string>Описание</string>
+            </property>
+           </column>
+           <item row="0" column="0">
+            <property name="text">
+             <string>NONE</string>
+            </property>
+           </item>
+           <item row="1" column="0">
+            <property name="text">
+             <string>NONE</string>
+            </property>
+           </item>
+           <item row="2" column="0">
+            <property name="text">
+             <string>NONE</string>
+            </property>
+           </item>
+           <item row="3" column="0">
+            <property name="text">
+             <string>NONE</string>
+            </property>
+           </item>
+           <item row="4" column="0">
+            <property name="text">
+             <string>NONE</string>
+            </property>
+           </item>
+           <item row="5" column="0">
+            <property name="text">
+             <string>NONE</string>
+            </property>
+           </item>
+           <item row="6" column="0">
+            <property name="text">
+             <string>NONE</string>
+            </property>
+           </item>
+           <item row="7" column="0">
+            <property name="text">
+             <string>NONE</string>
+            </property>
+           </item>
+           <item row="8" column="0">
+            <property name="text">
+             <string>NONE</string>
+            </property>
+           </item>
+           <item row="9" column="0">
+            <property name="text">
+             <string>NONE</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Выпрямитель</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QWidget" name="widget" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>180</width>
+            <height>670</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(170, 170, 255);</string>
+          </property>
+          <widget class="QWidget" name="layoutWidget">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>5</y>
+             <width>160</width>
+             <height>630</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <property name="spacing">
+             <number>30</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="adcBtn">
+              <property name="minimumSize">
+               <size>
+                <width>140</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+ 	border: 1px solid rgb(255, 255, 255);
+	border-radius: 17px;
+}
+QPushButton::hover{
+	background-color: rgb(120, 120, 180);
+}
+QPushButton::pressed{
+	background-color: rgb(90, 90, 140);
+}</string>
+              </property>
+              <property name="text">
+               <string>АЦП</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="canBtn">
+              <property name="minimumSize">
+               <size>
+                <width>140</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+ 	border: 1px solid rgb(255, 255, 255);
+	border-radius: 17px;
+}
+QPushButton::hover{
+	background-color: rgb(120, 120, 180);
+}
+QPushButton::pressed{
+	background-color: rgb(90, 90, 140);
+}</string>
+              </property>
+              <property name="text">
+               <string>CAN</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="rcBtn">
+              <property name="minimumSize">
+               <size>
+                <width>140</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+ 	border: 1px solid rgb(255, 255, 255);
+	border-radius: 17px;
+}
+QPushButton::hover{
+	background-color: rgb(120, 120, 180);
+}
+QPushButton::pressed{
+	background-color: rgb(90, 90, 140);
+}</string>
+              </property>
+              <property name="text">
+               <string>RC-485</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="usbBtn">
+              <property name="minimumSize">
+               <size>
+                <width>140</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+ 	border: 1px solid rgb(255, 255, 255);
+	border-radius: 17px;
+}
+QPushButton::hover{
+	background-color: rgb(120, 120, 180);
+}
+QPushButton::pressed{
+	background-color: rgb(90, 90, 140);
+}</string>
+              </property>
+              <property name="text">
+               <string>USB</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="sdBtn">
+              <property name="minimumSize">
+               <size>
+                <width>140</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+ 	border: 1px solid rgb(255, 255, 255);
+	border-radius: 17px;
+}
+QPushButton::hover{
+	background-color: rgb(120, 120, 180);
+}
+QPushButton::pressed{
+	background-color: rgb(90, 90, 140);
+}</string>
+              </property>
+              <property name="text">
+               <string>SD-карта</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="wifiBtn">
+              <property name="minimumSize">
+               <size>
+                <width>140</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+ 	border: 1px solid rgb(255, 255, 255);
+	border-radius: 17px;
+}
+QPushButton::hover{
+	background-color: rgb(120, 120, 180);
+}
+QPushButton::pressed{
+	background-color: rgb(90, 90, 140);
+}</string>
+              </property>
+              <property name="text">
+               <string>Wi-Fi</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="sensorBtn">
+              <property name="minimumSize">
+               <size>
+                <width>140</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+ 	border: 1px solid rgb(255, 255, 255);
+	border-radius: 17px;
+}
+QPushButton::hover{
+	background-color: rgb(120, 120, 180);
+}
+QPushButton::pressed{
+	background-color: rgb(90, 90, 140);
+}</string>
+              </property>
+              <property name="text">
+               <string>Датчики</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="serviceSettingsBtn">
+              <property name="minimumSize">
+               <size>
+                <width>140</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+ 	border: 1px solid rgb(255, 255, 255);
+	border-radius: 17px;
+}
+QPushButton::hover{
+	background-color: rgb(120, 120, 180);
+}
+QPushButton::pressed{
+	background-color: rgb(90, 90, 140);
+}</string>
+              </property>
+              <property name="text">
+               <string>Сервисные настройки</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="ustavkBtn">
+              <property name="minimumSize">
+               <size>
+                <width>140</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+ 	border: 1px solid rgb(255, 255, 255);
+	border-radius: 17px;
+}
+QPushButton::hover{
+	background-color: rgb(120, 120, 180);
+}
+QPushButton::pressed{
+	background-color: rgb(90, 90, 140);
+}</string>
+              </property>
+              <property name="text">
+               <string>Уставки</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pidBtn">
+              <property name="minimumSize">
+               <size>
+                <width>140</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+ 	border: 1px solid rgb(255, 255, 255);
+	border-radius: 17px;
+}
+QPushButton::hover{
+	background-color: rgb(120, 120, 180);
+}
+QPushButton::pressed{
+	background-color: rgb(90, 90, 140);
+}</string>
+              </property>
+              <property name="text">
+               <string>ПИД</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QStackedWidget" name="stackedWidget">
+          <property name="currentIndex">
+           <number>6</number>
+          </property>
+          <widget class="QWidget" name="page_0">
+           <widget class="QLabel" name="label_2">
+            <property name="geometry">
+             <rect>
+              <x>50</x>
+              <y>20</y>
+              <width>41</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>ADC</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="page_1">
+           <widget class="QLabel" name="label_6">
+            <property name="geometry">
+             <rect>
+              <x>30</x>
+              <y>40</y>
+              <width>63</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>CAN</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="page_2">
+           <widget class="QLabel" name="label_7">
+            <property name="geometry">
+             <rect>
+              <x>50</x>
+              <y>20</y>
+              <width>71</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>RC-485</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="page_3">
+           <widget class="QLabel" name="label_8">
+            <property name="geometry">
+             <rect>
+              <x>40</x>
+              <y>10</y>
+              <width>71</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>USB</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="page_4">
+           <widget class="QLabel" name="label_9">
+            <property name="geometry">
+             <rect>
+              <x>140</x>
+              <y>50</y>
+              <width>101</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>SD-карта</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="page_9">
+           <widget class="QLabel" name="label_14">
+            <property name="geometry">
+             <rect>
+              <x>30</x>
+              <y>20</y>
+              <width>101</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>ПИД</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="page_5">
+           <widget class="QLabel" name="label_10">
+            <property name="geometry">
+             <rect>
+              <x>90</x>
+              <y>40</y>
+              <width>101</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Wi-Fi</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="page_6">
+           <widget class="QLabel" name="label_11">
+            <property name="geometry">
+             <rect>
+              <x>50</x>
+              <y>30</y>
+              <width>101</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Датчики</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="page_7">
+           <widget class="QLabel" name="label_12">
+            <property name="geometry">
+             <rect>
+              <x>40</x>
+              <y>20</y>
+              <width>221</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Сервисные настройки</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="page_8">
+           <widget class="QLabel" name="label_13">
+            <property name="geometry">
+             <rect>
+              <x>90</x>
+              <y>40</y>
+              <width>101</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Уставки</string>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>Инвертор</string>
+       </attribute>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>30</y>
+          <width>111</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Инвертор</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
