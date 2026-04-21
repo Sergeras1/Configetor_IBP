@@ -25,6 +25,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ${PROJECT_SOURCES}
         rectifier.h rectifier.cpp rectifier.ui
         resource.qrc
+        exportrec.h exportrec.cpp exportrec.ui
+        importinv.h importinv.cpp importinv.ui
+        exportinv.h exportinv.cpp exportinv.ui
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Configurator APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

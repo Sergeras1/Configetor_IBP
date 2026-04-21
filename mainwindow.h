@@ -3,6 +3,10 @@
 
 #include <QMainWindow>
 #include "rectifier.h"
+#include "exportrec.h"
+#include "importinv.h"
+#include "exportinv.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -22,5 +26,9 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    Rectifier* recWin;
+    exportRec* exRecWin;
+    ImportInv* impInvWin;
+    ExportInv* expInvWin;
 };
 #endif // MAINWINDOW_H

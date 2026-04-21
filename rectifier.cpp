@@ -6,6 +6,9 @@ Rectifier::Rectifier(QWidget *parent)
     , ui(new Ui::Rectifier)
 {
     ui->setupUi(this);
+    connect(ui->cancelBtn, &QPushButton::clicked,this, [=](){
+        close();
+    });
 }
 
 Rectifier::~Rectifier()

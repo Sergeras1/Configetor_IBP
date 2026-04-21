@@ -9,42 +9,89 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    /*Менюк кнопок*/
+    /*Меню кнопок выпрямителя*/
     connect(ui->adcBtn, &QPushButton::clicked, this, [=](){
         ui->stackedWidget->setCurrentIndex(0);
     });
-    connect(ui->canBtn, &QPushButton::clicked, this, [=](){
+    connect(ui->interfaceCommunitacionBtn, &QPushButton::clicked, this, [=](){
         ui->stackedWidget->setCurrentIndex(1);
     });
-    connect(ui->rcBtn, &QPushButton::clicked, this, [=](){
+    connect(ui->sdBtn, &QPushButton::clicked, this, [=](){
         ui->stackedWidget->setCurrentIndex(2);
     });
-    connect(ui->usbBtn, &QPushButton::clicked, this, [=](){
-        ui->stackedWidget->setCurrentIndex(3);
-    });
-    connect(ui->sdBtn, &QPushButton::clicked, this, [=](){
+    connect(ui->sensorBtn, &QPushButton::clicked, this, [=](){
         ui->stackedWidget->setCurrentIndex(4);
     });
-    connect(ui->wifiBtn, &QPushButton::clicked, this, [=](){
-        ui->stackedWidget->setCurrentIndex(6);
-    });
-    connect(ui->sensorBtn, &QPushButton::clicked, this, [=](){
-        ui->stackedWidget->setCurrentIndex(7);
-    });
     connect(ui->serviceSettingsBtn, &QPushButton::clicked, this, [=](){
-        ui->stackedWidget->setCurrentIndex(8);
+        ui->stackedWidget->setCurrentIndex(5);
     });
     connect(ui->ustavkBtn, &QPushButton::clicked, this, [=](){
-        ui->stackedWidget->setCurrentIndex(9);
+        ui->stackedWidget->setCurrentIndex(6);
     });
-    connect(ui->pidBtn, &QPushButton::clicked, this, [=](){
-        ui->stackedWidget->setCurrentIndex(5);
+    connect(ui->importBtn, &QPushButton::clicked, this, [=](){
+        recWin = new Rectifier;
+        recWin->show();
+    });
+    connect(ui->exportBtn, &QPushButton::clicked, this, [=](){
+        exRecWin = new exportRec;
+        exRecWin->show();
+    });
+
+    /*Меню кнопок инвертора*/
+
+    connect(ui->invAdcBtn, &QPushButton::clicked, this, [=](){
+        ui->stackedWidgetInv->setCurrentIndex(0);
+    });
+    connect(ui->InvInterfaceCommunitacionBtn, &QPushButton::clicked, this, [=](){
+        ui->stackedWidgetInv->setCurrentIndex(1);
+    });
+    connect(ui->invSdBtn, &QPushButton::clicked, this, [=](){
+        ui->stackedWidgetInv->setCurrentIndex(2);
+    });
+    connect(ui->invSensorBtn, &QPushButton::clicked, this, [=](){
+        ui->stackedWidgetInv->setCurrentIndex(4);
+    });
+    connect(ui->invServiceSettingsBtn, &QPushButton::clicked, this, [=](){
+        ui->stackedWidgetInv->setCurrentIndex(5);
+    });
+    connect(ui->invUstavkBtn, &QPushButton::clicked, this, [=](){
+        ui->stackedWidgetInv->setCurrentIndex(6);
+    });
+    connect(ui->invImportBtn, &QPushButton::clicked, this, [=](){
+        impInvWin = new ImportInv;
+        impInvWin->show();
+    });
+    connect(ui->invExportBtn, &QPushButton::clicked, this, [=](){
+        expInvWin = new ExportInv;
+        expInvWin->show();
+    });
+
+    connect(ui->tabWidget, &QTabWidget::tabBarClicked, this, [=](int idx){
+        switch(idx){
+        case 0:
+            ui->statusBar->showMessage("Общее");
+            break;
+        case 1:
+            ui->statusBar->showMessage("Выпрямитель");
+            break;
+
+        case 2:
+            ui->statusBar->showMessage("Инвертор");
+            break;
+        default:
+            ui->statusBar->showMessage("Ошибка вывода вкладки");
+            break;
+        }
     });
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete recWin;
+    delete exRecWin;
+    delete impInvWin;
+    delete expInvWin;
 }
 
 
