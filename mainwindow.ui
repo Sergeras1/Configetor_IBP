@@ -4822,7 +4822,7 @@ QPushButton::pressed{
          </rect>
         </property>
         <property name="currentIndex">
-         <number>6</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="page_2">
          <layout class="QGridLayout" name="gridLayout_4">
